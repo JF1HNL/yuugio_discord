@@ -47,6 +47,13 @@ async def on_message(message):
   # メッセージ送信者がBotだった場合は無視する
   if message.author.bot:
     return
+  # 全体に影響がある部分
+  if message.content == "reset":
+    araki.__init__("あらき")
+    kim.__init__("きむ")
+    await message.channel.send("リセットしました。")
+    return
+  # ここに影響がある部分
   if message.channel.name == 'あらき':
     await shori(message, araki)
     return
