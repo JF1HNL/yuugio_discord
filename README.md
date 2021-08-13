@@ -12,3 +12,6 @@
 
 ## その他
 最初のコマンド入力だけ、`初期化しました`と表示されます。
+
+>## トークンを持ってくるページ
+>- [Discord Developer Portal — My Applications](https://discord.com/developers/applications/)
