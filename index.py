@@ -24,10 +24,10 @@ async def shori(message, player):
   if player.start_msg:
     player.start_msg = False
     await message.channel.send("-------------------------\n初期化済みです。\n-------------------------")
-  if message.content == "half":
+  if message.content in ["half", "Half"]:
     await message.channel.send(player.half())
     return
-  if message.content == "ls":
+  if message.content in ["ls", "Ls"]:
     await message.channel.send(player.string())
     return
   if message.content.isdecimal():
@@ -48,7 +48,7 @@ async def on_message(message):
   if message.author.bot:
     return
   # 全体に影響がある部分
-  if message.content == "reset":
+  if message.content in ["reset", "Reset"]:
     araki.__init__("あらき")
     kim.__init__("きむ")
     await message.channel.send("リセットしました。")
